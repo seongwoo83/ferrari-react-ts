@@ -1,0 +1,123 @@
+@charset "UTF-8";
+
+.news{
+    margin: 70px 50px;
+    position: relative;
+}
+.news_container{
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: flex;
+    flex-direction: column;
+}
+.news_oh{
+    overflow: hidden;
+    width: 100%;
+}
+.news_container .img_wrap{
+    position: relative;
+    left:0;
+    background-color: #eee;
+    padding-top: 113%; 
+    width: 0;
+}
+.img_bx{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+}
+.news_container img{
+    width: auto;
+    height: 100%;
+}
+.grey_back{
+    position: absolute;
+    left: 0;
+    right: 0;
+    z-index: -1;
+    background-color: #ddd;
+}
+.news_tit{
+    padding: 15px 0;
+    margin: 0;
+}
+.news_tit span{
+    font-size: 20px;
+    font-weight: bold;
+}
+.news_sum{
+    padding: 0  30px 15px 0;
+    margin: 0;
+}
+.news_sum, .cont_wrap .detail{
+    opacity: 0;
+    transform: translateY(10px);
+    transition: .5s linear;
+}
+.news_sum.on, .cont_wrap .detail.on{
+    transform: translateY(0);
+    opacity: 1;
+}
+.news_tit span{
+    display: inline-block;
+    transform: matrix(0.99756, 0.06975, -0.06975, 0.99756, 0, 25);
+    opacity: 0;
+    transition: transform .5s linear;
+}
+.news_tit span.on{
+    transform:matrix(1,0,0,1,0,0);
+    opacity: 1;
+}
+.detail{
+    position: relative;
+    padding: 5px 0;
+    border: none;
+    background-color: transparent;
+    color: #aaa;
+}
+.detail::before{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    border: 1px solid #f22;
+    transition: .4s;
+}
+.detail::after{
+    content: '';
+    position: absolute;
+    width: 100%;
+    bottom: 0;
+    right: 0;
+    border: 1px solid #f22;
+    transition: .4s;
+}
+@media screen and (min-width: 850px){
+    .news{
+        height: 600px;
+        margin: 50px 0;
+    }
+    .news_container{
+        flex-direction: row;
+        width: 60%;
+        height: 75%;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        align-items: center;
+        justify-content: space-around;
+        overflow: hidden;
+    }
+    .news_oh{
+        width: 40%;
+        height: 100%;
+    }
+    .cont_wrap{
+        width: 40%;
+    }
+}

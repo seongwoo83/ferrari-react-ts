@@ -1,0 +1,59 @@
+@charset "UTF-8";
+
+.grid_bd{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+}
+.grid_bd li{
+    aspect-ratio: 1/1;
+    display: flex;
+    justify-content: flex-end;
+    flex-direction: column;
+    text-align: center;
+    color: #fff;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 148%;
+}
+.grid_bd li:hover{
+    animation: boardAni 3s linear forwards;
+}
+@keyframes boardAni {
+    to{
+        background-size: 160%;
+    }
+}
+.grid_bd h4{
+    margin: 0;
+    font-size: min(20px, 2vw);
+}
+.grid_bd h2{
+    font-size: min(25px, 3vw);
+    padding: 0 10px;
+}
+.n_btn{
+    margin: 10px;
+}
+.n_btn::before{
+    margin-left:100%;
+}
+.n_btn::after{
+    margin-right:100%;
+}
+.n_btn:hover::before, .n_btn:hover::after{
+    margin: 0 0 0 0;
+}
+@media screen and (max-width:580px){
+    .grid_bd{
+        grid-template-columns: none;
+    }
+    .grid_bd h4{
+        font-size: 18px;
+    }
+    .grid_bd h2{
+        font-size: 25px;
+    }
+    .grid_bd button{
+        font-size: 20px;
+    }
+}
