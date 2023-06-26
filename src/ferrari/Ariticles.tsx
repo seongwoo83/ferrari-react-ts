@@ -41,10 +41,10 @@ function Articles(){
             </div>
             <Link to="/art" state={{
                 aridx : (Number(aridx)-1 !== 0 ? Number(aridx)-1 : article_data.length-1)
-            }}><StyledBtn className="prevBtn">prev</StyledBtn></Link>
+            }}><StyledBtn className="prevBtn arti">prev</StyledBtn></Link>
             <Link to="/art" state={{
                 aridx : (Number(aridx)+1 > article_data.length? 1 : Number(aridx)+1)
-            }}><StyledBtn className="nextBtn">next</StyledBtn></Link>
+            }}><StyledBtn className="nextBtn arti">next</StyledBtn></Link>
         </div>
     )
 }

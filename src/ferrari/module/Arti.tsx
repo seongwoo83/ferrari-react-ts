@@ -23,12 +23,6 @@ function Article(props:state_type):ReactElement {
                                 to={"/art"}
                                 state={{
                                     aridx: v.idx,
-                                    artit: v.tit,
-                                    ardate: v.date,
-                                    arloca: v.loca,
-                                    arsrc: v.src,
-                                    arcont: v.cont,
-                                    arbsrc: v.bsrc
                                 }}
                             >
                                 Show Detail

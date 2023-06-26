@@ -32,24 +32,24 @@
 .a_art_wrap b{
     font-size: 16px;
 }
-button.jPERWA{
+button.arti{
     position: fixed;
     top: 50%;
     z-index: 10;
     letter-spacing: 1px;
     color: #777;
 }
-button.jPERWA::before, button.jPERWA::after{
+button.arti::before, button.arti::after{
     content: '';
     position: absolute;
     border: 1px solid red;
     width: 100%;
     left: 0;
 }
-button.jPERWA::before{
+button.arti::before{
     top: 0;
 }
-button.jPERWA::after{
+button.arti::after{
     bottom: 0;
 }
 .prevBtn{

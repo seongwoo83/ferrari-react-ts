@@ -23,7 +23,7 @@ const mdata:model_type = [
     {
         idx: 1,
         name: "portofino",
-        slo: "재발견을 향한 여정",
+        slo: "A VOYAGE OF REDISCOVERY",
         src: "./img/index/portofino.png",
         cvid: [
             "https://ferrari-cdn.thron.com/static/KLGC0Q_GT-Portofino_M_Video_Ufficiale_YT-4500_JAPDQ7.mp4?xseo=",
@@ -51,7 +51,7 @@ const mdata:model_type = [
     {
         idx: 2,
         name: "purosangue",
-        slo: "그 무엇과도 다른",
+        slo: "UNLIKE ANY OTHER",
         src: "./img/index/purosangue.png",
         cvid: [
             "https://ferrari-cdn.thron.com/static/M83MPR_F175_Fascination_revised_2022_09_08_GN6T2P.mp4?xseo=",
@@ -79,7 +79,7 @@ const mdata:model_type = [
     {
         idx: 3,
         name: "roma",
-        slo: "시간을 초월한 우아함",
+        slo: "LA NUOVA DOLCE VITA",
         src: "./img/index/roma.png",
         cvid: [
             "https://ferrari-cdn.thron.com/delivery/public/video/ferrari/4681ff51-f971-4773-a8f0-98428ad815e0/bocxuw/WEBFULLHD/ferrari-roma-intro-it",
@@ -107,7 +107,7 @@ const mdata:model_type = [
     {
         idx: 4,
         name: "sf90-stradale",
-        slo: "상상을 넘어서",
+        slo: "BEYOND IMAGINATION",
         src: "./img/index/sf90-stradale.png",
         cvid: [
             "https://ferrari-cdn.thron.com/delivery/public/video/ferrari/9a9d2452-4f5d-4294-b42d-7dcdfb55d0e8/bocxuw/WEBFULLHD/official-video-173",
@@ -135,7 +135,7 @@ const mdata:model_type = [
     {
         idx: 5,
         name: "296-gts",
-        slo: "운전의 즐거움, 그 본보기가 되다",
+        slo: "THE EPITOME OF DRIVING PLEASURE",
         src: "./img/index/296-gts.png",
         cvid: [
             "https://ferrari-cdn.thron.com/static/MVAIMC_GT-Copertina_Ferrari_GTS_768x1024_1QI4W1.mp4?xseo="
@@ -162,7 +162,7 @@ const mdata:model_type = [
     {
         idx: 6,
         name: "296-gtb",
-        slo: "운전의 즐거움을 정의하다",
+        slo: "DEFINING FUN TO DRIVE",
         src: "./img/index/296-gtb.png",
         cvid: [
             "https://ferrari-cdn.thron.com/delivery/public/video/ferrari/5feee24d-b9af-49b5-b4ab-72937a458461/rstc5j/WEBHD/gt-ferrari_296gtb_copertina_768x1024_astratta"
@@ -189,7 +189,7 @@ const mdata:model_type = [
     {
         idx: 7,
         name: "roma-spider",
-        slo: "새로운 이야기가 시작됩니다.",
+        slo: "A NEW STORY BEGINS",
         src: "./img/index/roma-spider.png",
         cvid: [
             "https://ferrari-cdn.thron.com/delivery/public/video/ferrari/e35f89f2-00a6-4499-bd83-6d477d08767e/bocxuw/WEBFULLHD/ferrari-roma-spider-official-",
