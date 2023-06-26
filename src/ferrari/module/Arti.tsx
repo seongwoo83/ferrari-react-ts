@@ -10,7 +10,7 @@ type state_type ={
 function Article(props:state_type):ReactElement {
     return (
         <div className={"uni_container " + props.art}>
-            {article_data[props.art].map((v, i) => {
+            {article_data.map((v, i) => {
                 return (
                     <div className="article" key={i}>
                         <div className="u_img_wrap">
@@ -20,7 +20,7 @@ function Article(props:state_type):ReactElement {
                         <div className="u_tit_wrap">
                             <h4>{v.tit}</h4>
                             <Link
-                                to="/art"
+                                to={"/art"}
                                 state={{
                                     aridx: v.idx,
                                     artit: v.tit,

@@ -1,0 +1,36 @@
+@charset "UTF-8";
+
+.img_slide{
+    position: relative;
+    height: 720px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+.img_slide li{
+    position: absolute;
+    height: 80%;
+    top: 0;
+    left: 0;
+}
+.img_slide li img{
+    height: 100%;
+}
+
+@media screen and (max-width:1250px) {
+    .img_slide{
+        height: 500px;
+    }
+}
+@media screen and (max-width: 800px){
+    .img_slide{
+        height: 400px;
+    }
+    .img_slide li{
+        height: 75%;
+    }
+}
+@media screen and (max-width: 630px){
+    .img_slide{
+        height: 300px;
+    }
+}

@@ -32,6 +32,32 @@
 .a_art_wrap b{
     font-size: 16px;
 }
+button.jPERWA{
+    position: fixed;
+    top: 50%;
+    z-index: 10;
+    letter-spacing: 1px;
+    color: #777;
+}
+button.jPERWA::before, button.jPERWA::after{
+    content: '';
+    position: absolute;
+    border: 1px solid red;
+    width: 100%;
+    left: 0;
+}
+button.jPERWA::before{
+    top: 0;
+}
+button.jPERWA::after{
+    bottom: 0;
+}
+.prevBtn{
+    left: 3%;
+}
+.nextBtn{
+    right: 3%;
+}
 @media screen and (min-width:900px) {
     .a_wrap{
         width: 70%;
