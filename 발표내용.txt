@@ -14,3 +14,6 @@
 -> bootstrap
 
 4. state와 property 전달로 각 라우터사이의 데이터를 전송함
+
+5. useLocation 사용으로 게시글의 각 고유번호를 전달하고 다음, 이전 버튼 클릭시 해당 게시글의 고유번호를 state 전달로 가지고 옴
+
