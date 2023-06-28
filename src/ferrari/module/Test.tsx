@@ -44,7 +44,7 @@ function Test():ReactElement{
     const chooseSetVidx = function(e:any){
         let cTargets = [...e.target.parentNode.parentNode.children]
         setVidx(cTargets.indexOf(e.target.parentNode));
-        console.log(vidx);
+        // console.log(vidx);
     }
     return (
         <>

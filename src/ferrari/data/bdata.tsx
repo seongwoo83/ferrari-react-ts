@@ -1,6 +1,7 @@
 type board_type={
     [key: string] : string
 }[]
+export type {board_type};
 
 const bdata:board_type= [
     {
@@ -35,4 +36,4 @@ const bdata:board_type= [
     },
 ]
 
-export default bdata;
+export { bdata};

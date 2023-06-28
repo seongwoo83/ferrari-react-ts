@@ -3,6 +3,7 @@ import { Autoplay } from "swiper";
 import '../css/ban.css';
 import styled from "styled-components";
 import { ReactElement } from "react";
+import { board_type } from "../data/bdata";
 
 const StyledBtnBx = styled.div`
     overflow: hidden;
@@ -16,7 +17,7 @@ const StyledBtn = styled.button`
 `
 function Ban():ReactElement{
 
-    const slide_data = [
+    const slide_data:board_type = [
         {
             stit:"Cars",
             btit:"Start Your Engine",

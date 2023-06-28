@@ -1,5 +1,5 @@
 import $ from "jquery";
-import bdata from "../data/bdata";
+import {bdata} from "../data/bdata";
 import '../css/board.css';
 import { StyledBtn, StyledBtnBx } from "./Ban";
 import { ReactElement } from "react";
