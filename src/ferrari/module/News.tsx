@@ -1,10 +1,11 @@
 import $ from "jquery";
 import "../css/news.css";
 import { ReactElement } from "react";
+import { board_type } from "../data/bdata";
 
 function jqfn():any{
 
-    $(() => {
+    $(():void => {
         $(".news_tit").each((i, v) => {
             let hcode:string = $(v)
                 .text()
@@ -23,11 +24,11 @@ function jqfn():any{
         $(window).on("resize",function():void{
 
             $(".news").css({
-                height: ($(".news_container").outerHeight() || 0)+ 100+ "px"
+                height: ($(".news_container").outerHeight() || 0)+ 150+ "px"
             })
         });
         $(".news").css({
-            height: ($(".news_container").outerHeight() || 0) + 100+ "px"
+            height: ($(".news_container").outerHeight() || 0) + 150+ "px"
         });
         
         
@@ -89,7 +90,7 @@ function jqfn():any{
 jqfn();
 
 function News():ReactElement {
-    const news_data = [
+    const news_data:board_type = [
         {
             src: "./img/news/news1.jpg",
             tit: "완벽한 테일러 메이드",
