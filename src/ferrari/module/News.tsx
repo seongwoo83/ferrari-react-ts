@@ -1,95 +1,88 @@
 import $ from "jquery";
 import "../css/news.css";
-import { ReactElement } from "react";
+import { ReactElement, useEffect } from "react";
 import { board_type } from "../data/bdata";
 
-function jqfn():any{
-
-    $(():void => {
-        $(".news_tit").each((i, v) => {
-            let hcode:string = $(v)
-                .text()
-                .split(" ")
-                .map((v, i) => `<span>${v}</span>`)
-                .join(" ");
-            $(v).html(hcode);
-        });
-    
-        $(".news_container").eq(0).find(".img_wrap").css({
-            width:"100%"
-        }).find(".img_bx").css({
-            opacity:1
-        }).parents(".news_oh").siblings(".cont_wrap").find(".news_sum").addClass("on").siblings(".detail").addClass("on").siblings(".news_tit").find("span").addClass("on");
-    
-        $(window).on("resize",function():void{
-
-            $(".news").css({
-                height: ($(".news_container").outerHeight() || 0)+ 150+ "px"
-            })
-        });
-        $(".news").css({
-            height: ($(".news_container").outerHeight() || 0) + 150+ "px"
-        });
-        
-        
-        let snum:number = 0;
-        let prot:number = 0
-        function newsSlide():void{
-            if(prot ===1)return;
-            prot = 1;
-            setTimeout(():void => {
-                prot = 0;
-            }, 1000);
-            $('.news_container').eq(snum).find(".img_bx").animate({
-                opacity:0
-            },100,()=>{
-                $(".news").find(".news_container").eq(snum).find(".img_wrap").animate({
-                    left:"100%"
-                },300,()=>{
-                    $(".news").find(".news_container").eq(snum).find(".img_wrap").css({
-                        left:0,
-                        width:0
-                    })
-                })
-            }).parents(".news_oh").siblings(".cont_wrap").find(".news_sum").removeClass("on").siblings(".detail").removeClass("on").siblings(".news_tit").find("span").removeClass("on")
-    
-    
-            setTimeout(():void => {
-                $(".news_container").eq(snum+1===4? 0 : snum+1).find(".img_wrap").animate({
-                    width:"100%"
-                },300,()=>{
-                    $(".news").find(".news_container").eq(snum+1===4? 0 : snum+1).find(".img_bx").animate({
-                        opacity:1
-                    },100).parents(".news_oh").siblings(".cont_wrap").find(".news_sum").addClass("on").siblings(".detail").addClass("on").siblings(".news_tit").find("span").addClass("on");
-                    snum++;
-                    if(snum===4) snum=0;
-                })
-            }, 400);
-            clearAuto()
-        }
-    
-        $(".news").on("click",newsSlide);
-    
-    
-        let autoI: string | number | NodeJS.Timeout | undefined;
-        let autoT: string | number | NodeJS.Timeout | undefined;
-    
-        function autoSlide():void {
-            autoI = setInterval(newsSlide, 3000);
-        }
-    
-        autoSlide();
-    
-        function clearAuto():void {
-            clearInterval(autoI);
-            clearTimeout(autoT);
-            autoT = setTimeout(autoSlide, 1000);
-        }
-    });
-}
-jqfn();
 
 function News():ReactElement {
+    useEffect(():void=>{
+            $(".news_tit").each((i, v) => {
+                let hcode:string = $(v)
+                    .text()
+                    .split(" ")
+                    .map((v, i) => `<span>${v}</span>`)
+                    .join(" ");
+                $(v).html(hcode);
+            });
+        
+            $(".news_container").eq(0).find(".img_wrap").css({
+                width:"100%"
+            }).find(".img_bx").css({
+                opacity:1
+            }).parents(".news_oh").siblings(".cont_wrap").find(".news_sum").addClass("on").siblings(".detail").addClass("on").siblings(".news_tit").find("span").addClass("on");
+        
+            $(window).on("resize",function():void{
+    
+                $(".news").css({
+                    height: ($(".news_container").outerHeight() || 0)+ 150+ "px"
+                })
+            });
+            $(".news").css({
+                height: ($(".news_container").outerHeight() || 0) + 150+ "px"
+            });
+            
+            
+            let snum:number = 0;
+            let prot:number = 0
+            function newsSlide():void{
+                if(prot ===1)return;
+                prot = 1;
+                setTimeout(():void => {
+                    prot = 0;
+                }, 1000);
+                $('.news_container').eq(snum).find(".img_bx").animate({
+                    opacity:0
+                },100,()=>{
+                    $(".news").find(".news_container").eq(snum).find(".img_wrap").animate({
+                        left:"100%"
+                    },300,()=>{
+                        $(".news").find(".news_container").eq(snum).find(".img_wrap").css({
+                            left:0,
+                            width:0
+                        })
+                    })
+                }).parents(".news_oh").siblings(".cont_wrap").find(".news_sum").removeClass("on").siblings(".detail").removeClass("on").siblings(".news_tit").find("span").removeClass("on")
+        
+        
+                setTimeout(():void => {
+                    $(".news_container").eq(snum+1===4? 0 : snum+1).find(".img_wrap").animate({
+                        width:"100%"
+                    },300,()=>{
+                        $(".news").find(".news_container").eq(snum+1===4? 0 : snum+1).find(".img_bx").animate({
+                            opacity:1
+                        },100).parents(".news_oh").siblings(".cont_wrap").find(".news_sum").addClass("on").siblings(".detail").addClass("on").siblings(".news_tit").find("span").addClass("on");
+                        snum++;
+                        if(snum===4) snum=0;
+                    })
+                }, 400);
+                clearAuto()
+            }
+        
+            let autoI: string | number | NodeJS.Timeout | undefined;
+            let autoT: string | number | NodeJS.Timeout | undefined;
+        
+            function autoSlide():void {
+                autoI = setInterval(newsSlide, 3000);
+            }
+        
+            autoSlide();
+        
+            function clearAuto():void {
+                clearInterval(autoI);
+                clearTimeout(autoT);
+                autoT = setTimeout(autoSlide, 1500);
+            }
+    },[])
     const news_data:board_type = [
         {
             src: "./img/news/news1.jpg",
@@ -131,7 +124,6 @@ function News():ReactElement {
                         </div>
                         </div>
                 ))}
-                {jqfn()}
         </section>
     );
 }
